@@ -39,8 +39,10 @@ export const SITE = {
 // and the hero automatically switches from the still image to the real,
 // scroll-scrubbed video — no other code change needed. See AI_ASSET_PROMPTS.md.
 export const HERO_MEDIA = {
-  video: "/videos/hero.mp4",
-  videoMobile: "/videos/hero-mobile.mp4",
+  // Single continuous file — all brand clips concatenated back-to-back so
+  // the home hero plays through every clip with zero gap/reload between
+  // them, then loops. See public/videos/hero-playlist.mp4.
+  video: "/videos/hero-playlist.mp4",
   poster: "/images/hero-poster.jpg",
 } as const;
 

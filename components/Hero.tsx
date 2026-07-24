@@ -6,7 +6,7 @@ import Button from "@/components/ui/Button";
 import SplitText from "@/components/SplitText";
 import Reveal from "@/components/Reveal";
 import StarRating from "@/components/StarRating";
-import HeroVideoPlaylist from "@/components/HeroVideoPlaylist";
+import HeroMedia from "@/components/HeroMedia";
 import { useReducedMotion } from "@/lib/useReducedMotion";
 
 export default function Hero() {
@@ -14,12 +14,17 @@ export default function Hero() {
 
   return (
     <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-forest">
-      {/* Media layer (parallax) — cycles through every brand clip */}
+      {/* Media layer (parallax) — one continuous clip through the whole
+          brand reel, then loops (see HERO_MEDIA.video) */}
       <div className="absolute inset-0" data-speed="0.9">
         <div className="absolute inset-0 scale-105">
-          <HeroVideoPlaylist
-            poster={HERO_MEDIA.poster}
+          <HeroMedia
+            video={HERO_MEDIA.video}
+            image={HERO_MEDIA.poster}
             alt="A handcrafted cedar deck at golden hour in Austin, Texas"
+            tone="wood"
+            label="Golden-hour deck hero"
+            priority
           />
         </div>
         {/* Warm cinematic gradient */}
