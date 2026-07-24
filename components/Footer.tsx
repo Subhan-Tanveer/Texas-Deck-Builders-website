@@ -11,13 +11,13 @@ export default function Footer() {
       <div className="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
         {/* Brand */}
         <div className="lg:col-span-1">
-          <div className="inline-block rounded-2xl bg-cream/95 p-3">
+          <div className="inline-block rounded-2xl bg-cream/95 p-4">
             <Image
               src="/logo.png"
               alt={SITE.name}
               width={200}
               height={211}
-              className="h-20 w-auto"
+              className="h-32 w-auto"
             />
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-cream/70">

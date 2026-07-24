@@ -52,7 +52,7 @@ export default function Nav() {
             height={211}
             priority
             className={`w-auto transition-all duration-300 group-hover:scale-105 ${
-              scrolled ? "h-11" : "h-14"
+              scrolled ? "h-16" : "h-24"
             }`}
           />
         </Link>
