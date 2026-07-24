@@ -7,6 +7,7 @@ import Hero from "@/components/Hero";
 import MarqueeStrip from "@/components/MarqueeStrip";
 import WhyUs from "@/components/WhyUs";
 import StatsBand from "@/components/StatsBand";
+import ProcessBand from "@/components/ProcessBand";
 import ServicesPreview from "@/components/ServicesPreview";
 import SectionHeading from "@/components/SectionHeading";
 import Reveal from "@/components/Reveal";
@@ -76,6 +77,8 @@ export default function HomePage() {
       </section>
 
       <StatsBand />
+
+      <ProcessBand />
 
       <ServicesPreview />
 

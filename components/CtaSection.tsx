@@ -3,30 +3,33 @@ import { SITE } from "@/lib/site";
 import Button from "@/components/ui/Button";
 import SplitText from "@/components/SplitText";
 import Reveal from "@/components/Reveal";
-import SmartImage from "@/components/SmartImage";
+import HeroMedia from "@/components/HeroMedia";
 
 /**
- * Closing CTA band with a parallax golden-hour backdrop.
+ * Closing CTA band with a parallax golden-hour backdrop. Plays an ambient
+ * looping video when /videos/cta-deck-evening.mp4 exists, else the still.
  */
 export default function CtaSection({
   title = "Ready to transform your backyard?",
   subtitle = "Get a free, no-pressure quote from Duke. Most estimates within 24 hours.",
   image = "/images/cta-deck-evening.webp",
+  video = "/videos/cta-deck-evening.mp4",
 }: {
   title?: string;
   subtitle?: string;
   image?: string;
+  video?: string;
 }) {
   return (
     <section className="relative isolate overflow-hidden bg-forest py-28">
       <div className="absolute inset-0" data-speed="0.9">
         <div className="absolute inset-0 scale-110">
-          <SmartImage
-            src={image}
+          <HeroMedia
+            video={video}
+            image={image}
             alt=""
             tone="wood"
             label="Evening deck with warm string lights"
-            sizes="100vw"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-forest via-forest/80 to-forest/60" />
