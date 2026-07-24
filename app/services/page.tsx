@@ -36,6 +36,7 @@ export default function ServicesPage() {
         title="Services that transform outdoor spaces."
         subtitle="From a first cedar platform to a full outdoor living room, we design and build it all — with one hands-on crew and one point of contact."
         image="/images/services/services-hero.webp"
+        video="/videos/services-hero.mp4"
         crumbs={[
           { label: "Home", href: "/" },
           { label: "Services", href: "/services" },

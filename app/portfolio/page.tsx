@@ -27,6 +27,7 @@ export default function PortfolioPage() {
         title="Drag the slider. See the difference."
         subtitle="Real Austin backyards, transformed. Every project starts as a blank yard and ends as the favorite room in the house."
         image="/images/portfolio-hero.webp"
+        video="/videos/portfolio-hero.mp4"
         crumbs={[
           { label: "Home", href: "/" },
           { label: "Portfolio", href: "/portfolio" },

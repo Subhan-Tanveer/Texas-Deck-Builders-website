@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import SplitText from "@/components/SplitText";
 import Reveal from "@/components/Reveal";
-import SmartImage from "@/components/SmartImage";
+import HeroMedia from "@/components/HeroMedia";
 
 /**
  * Inner-page hero with a parallax background image, animated headline, and
@@ -14,12 +14,15 @@ export default function PageHero({
   subtitle,
   eyebrow,
   image,
+  video,
   crumbs = [],
 }: {
   title: string;
   subtitle?: string;
   eyebrow?: string;
   image: string;
+  /** Optional looping background video; auto-swaps in when the file exists. */
+  video?: string;
   crumbs?: { label: string; href: string }[];
 }) {
   return (
@@ -27,13 +30,13 @@ export default function PageHero({
       {/* Parallax background */}
       <div className="absolute inset-0" data-speed="0.85">
         <div className="absolute inset-0 scale-110">
-          <SmartImage
-            src={image}
+          <HeroMedia
+            video={video}
+            image={image}
             alt=""
             priority
             tone="green"
-            label="Hero image"
-            sizes="100vw"
+            label="Hero background"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-forest via-forest/70 to-forest/30" />

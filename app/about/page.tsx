@@ -78,6 +78,7 @@ export default function AboutPage() {
         title="Meet the team behind the 4.9-star rating."
         subtitle="A young company with a builder's-lifetime of standards. Here's who shows up in your backyard."
         image="/images/about-hero.webp"
+        video="/videos/about-hero.mp4"
         crumbs={[
           { label: "Home", href: "/" },
           { label: "About", href: "/about" },

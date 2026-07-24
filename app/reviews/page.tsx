@@ -35,6 +35,7 @@ export default function ReviewsPage() {
         title="The best company in the city of Austin."
         subtitle="That's a real quote from a real customer. Here's the 4.9-star reputation behind it."
         image="/images/reviews-hero.webp"
+        video="/videos/reviews-hero.mp4"
         crumbs={[
           { label: "Home", href: "/" },
           { label: "Reviews", href: "/reviews" },
