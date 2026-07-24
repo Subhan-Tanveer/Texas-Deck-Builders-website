@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+/* ============================================================
+   TEXAS DECK BUILDERS — design tokens
+   Warm, hands-on, craftsman. Deep forest green + cedar/copper
+   + cream. NOT luxury, NOT corporate: sunset light on fresh wood.
+   ============================================================ */
+@theme {
+  /* Core palette */
+  --color-forest: #14351f; /* deep forest green — primary dark */
+  --color-forest-700: #1c4a2c;
+  --color-forest-600: #256039;
+  --color-pine: #2f7048;
+  --color-moss: #6f8f5f;
+
+  --color-cedar: #c07a43; /* warm cedar stain — accent */
+  --color-copper: #b5763b; /* premium craft accent */
+  --color-amber: #e0a34e; /* golden-hour glow */
+
+  --color-cream: #f7f2e8; /* soft off-white — never stark */
+  --color-sand: #ece0cc;
+  --color-linen: #fbf8f1;
+
+  --color-bark: #3a2a1e; /* deep warm brown text on light */
+  --color-charcoal: #22201b; /* near-black warm */
+  --color-ash: #6a6357; /* muted body / captions */
+
+  /* Semantic aliases */
+  --color-ink: var(--color-charcoal);
+  --color-paper: var(--color-cream);
+
+  /* Fonts (wired to next/font CSS vars in layout.tsx) */
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Motion */
+  --ease-out-cubic: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Layout */
+  --shadow-lift: 0 24px 60px -24px rgba(20, 53, 31, 0.45);
+  --shadow-card: 0 12px 40px -20px rgba(58, 42, 30, 0.35);
+}
+
+/* ---------- base ---------- */
+* {
+  border-color: color-mix(in srgb, var(--color-bark) 12%, transparent);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+/* ScrollSmoother drives scrolling; disable native smooth to avoid fights */
+html.has-smooth-scroll {
+  scroll-behavior: auto;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-bark);
+  font-family: var(--font-body);
+  font-synthesis-weight: none;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-amber);
+  color: var(--color-forest);
+}
+
+/* Headings default to display serif */
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+/* Thin, on-brand scrollbar */
+::-webkit-scrollbar {
+  width: 11px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-sand);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-forest-600);
+  border-radius: 99px;
+  border: 3px solid var(--color-sand);
+}
+
+/* ---------- reusable utilities ---------- */
+@utility container-x {
+  width: 100%;
+  max-width: 80rem; /* 1280px */
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+/* Gradient text accent */
+@utility text-gradient-cedar {
+  background: linear-gradient(100deg, var(--color-cedar), var(--color-amber));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Grain / paper texture overlay (subtle warmth) */
+.paper-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+}
+
+/* Wood-grain hairline divider */
+.rule-cedar {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-cedar) 20%,
+    var(--color-amber) 50%,
+    var(--color-cedar) 80%,
+    transparent
+  );
+}
+
+/* ---------- keyframe animations ---------- */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-amber) 60%, transparent); }
+  70% { box-shadow: 0 0 0 16px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+@keyframes star-pop {
+  0% { transform: scale(0) rotate(-30deg); opacity: 0; }
+  60% { transform: scale(1.25) rotate(6deg); }
+  100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+
+.animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+.animate-marquee { animation: marquee 32s linear infinite; }
+.animate-pulse-ring { animation: pulse-ring 2.4s ease-out infinite; }
+
+/* Reveal helpers used by RevealStagger (GSAP toggles data attrs) */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* ---------- accessibility: reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .animate-float-slow,
+  .animate-marquee,
+  .animate-pulse-ring {
+    animation: none !important;
+  }
+}
+
+/* Form inputs */
+.tdb-input {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 2px solid color-mix(in srgb, var(--color-bark) 15%, transparent);
+  background: var(--color-cream);
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: var(--color-bark);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.tdb-input::placeholder {
+  color: color-mix(in srgb, var(--color-ash) 80%, transparent);
+}
+.tdb-input:focus {
+  outline: none;
+  border-color: var(--color-cedar);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-cedar) 18%, transparent);
+}
+
+/* Clear focus rings for keyboard users (WCAG) */
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 3px solid var(--color-copper);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
