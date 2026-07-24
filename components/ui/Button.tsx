@@ -15,7 +15,7 @@ const VARIANTS: Record<Variant, string> = {
   secondary:
     "bg-cream text-forest border-2 border-forest/25 hover:border-forest hover:bg-linen",
   ghost:
-    "bg-transparent text-forest border-2 border-cream/40 hover:border-cream/90 hover:bg-cream/10",
+    "bg-forest/25 backdrop-blur-sm text-cream border-2 border-cream/50 hover:border-cream hover:bg-cream/15",
 };
 
 const SIZES: Record<Size, string> = {

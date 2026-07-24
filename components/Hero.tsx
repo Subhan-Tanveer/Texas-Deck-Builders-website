@@ -1,62 +1,26 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import { Phone, ArrowRight, Star } from "lucide-react";
 import { SITE, HERO_MEDIA } from "@/lib/site";
 import Button from "@/components/ui/Button";
 import SplitText from "@/components/SplitText";
 import Reveal from "@/components/Reveal";
 import StarRating from "@/components/StarRating";
-import SmartImage from "@/components/SmartImage";
+import HeroVideoPlaylist from "@/components/HeroVideoPlaylist";
 import { useReducedMotion } from "@/lib/useReducedMotion";
 
 export default function Hero() {
-  const [hasVideo, setHasVideo] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
   const reduced = useReducedMotion();
-
-  // Probe for the hero video; only swap it in if the file actually exists so
-  // we never show a broken/black player before assets are added.
-  useEffect(() => {
-    if (reduced) return;
-    let alive = true;
-    fetch(HERO_MEDIA.video, { method: "HEAD" })
-      .then((r) => {
-        if (alive && r.ok) setHasVideo(true);
-      })
-      .catch(() => {});
-    return () => {
-      alive = false;
-    };
-  }, [reduced]);
 
   return (
     <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-forest">
-      {/* Media layer (parallax) */}
+      {/* Media layer (parallax) — cycles through every brand clip */}
       <div className="absolute inset-0" data-speed="0.9">
         <div className="absolute inset-0 scale-105">
-          {hasVideo ? (
-            <video
-              ref={videoRef}
-              className="h-full w-full object-cover"
-              autoPlay
-              muted
-              loop
-              playsInline
-              poster={HERO_MEDIA.poster}
-            >
-              <source src={HERO_MEDIA.video} type="video/mp4" />
-            </video>
-          ) : (
-            <SmartImage
-              src={HERO_MEDIA.poster}
-              alt="A handcrafted cedar deck at golden hour in Austin, Texas"
-              priority
-              tone="wood"
-              label="Golden-hour deck hero — drop hero.mp4 / hero-poster.webp in /public"
-              sizes="100vw"
-            />
-          )}
+          <HeroVideoPlaylist
+            poster={HERO_MEDIA.poster}
+            alt="A handcrafted cedar deck at golden hour in Austin, Texas"
+          />
         </div>
         {/* Warm cinematic gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-forest via-forest/55 to-forest/25" />

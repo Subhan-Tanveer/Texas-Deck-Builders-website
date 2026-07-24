@@ -35,7 +35,7 @@ export default function Nav() {
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
           ? "bg-cream/85 backdrop-blur-md shadow-[0_8px_30px_-18px_rgba(20,53,31,0.5)] py-2"
-          : "bg-transparent py-4"
+          : "bg-gradient-to-b from-forest/70 via-forest/30 to-transparent py-4"
       }`}
     >
       <nav className="container-x flex items-center justify-between gap-4">
@@ -65,8 +65,10 @@ export default function Nav() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`relative rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                    active ? "text-forest" : "text-bark/75 hover:text-forest"
+                  className={`relative rounded-full px-4 py-2 text-sm font-semibold transition-colors [text-shadow:0_1px_3px_rgba(0,0,0,0.35)] ${
+                    scrolled
+                      ? `[text-shadow:none] ${active ? "text-forest" : "text-bark/75 hover:text-forest"}`
+                      : `${active ? "text-amber" : "text-cream hover:text-amber"}`
                   }`}
                 >
                   {link.label}
@@ -85,7 +87,11 @@ export default function Nav() {
         <div className="hidden items-center gap-3 lg:flex">
           <a
             href={SITE.phoneHref}
-            className="flex items-center gap-2 text-sm font-semibold text-forest transition-colors hover:text-cedar"
+            className={`flex items-center gap-2 text-sm font-semibold transition-colors [text-shadow:0_1px_3px_rgba(0,0,0,0.35)] ${
+              scrolled
+                ? "[text-shadow:none] text-forest hover:text-cedar"
+                : "text-cream hover:text-amber"
+            }`}
           >
             <Phone size={16} />
             {SITE.phone}
