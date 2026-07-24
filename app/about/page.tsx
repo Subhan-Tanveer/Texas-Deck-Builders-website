@@ -23,25 +23,25 @@ const TEAM = [
     name: "Duke Schneider",
     role: "Owner & General Manager",
     bio: "Hands-on owner on every job site. Duke started Texas Deck Builders to prove a deck company could be honest, fast, and obsessed with craft — all at once.",
-    image: "/images/team/duke.webp",
+    image: "/images/team/duke.jpg",
   },
   {
     name: "Carlos Mendez",
     role: "Lead Carpenter",
     bio: "15 years framing and finishing. Carlos makes sure every board is straight, every joint is tight, and every fastener disappears.",
-    image: "/images/team/carlos.webp",
+    image: "/images/team/carlos.jpg",
   },
   {
     name: "Jesse Whitfield",
     role: "Project Manager",
     bio: "Your point of contact from first sketch to final walkthrough. Jesse keeps timelines honest and job sites spotless.",
-    image: "/images/team/jesse.webp",
+    image: "/images/team/jesse.jpg",
   },
   {
     name: "Marta Reyes",
     role: "Design Consultant",
     bio: "Turns backyard dreams into buildable 3D plans, matching materials, light and lifestyle to your home.",
-    image: "/images/team/marta.webp",
+    image: "/images/team/marta.jpg",
   },
 ];
 
@@ -77,7 +77,7 @@ export default function AboutPage() {
         eyebrow="Our Story"
         title="Meet the team behind the 4.9-star rating."
         subtitle="A young company with a builder's-lifetime of standards. Here's who shows up in your backyard."
-        image="/images/about-hero.webp"
+        image="/images/about-hero.jpg"
         video="/videos/about-hero.mp4"
         crumbs={[
           { label: "Home", href: "/" },
@@ -91,7 +91,7 @@ export default function AboutPage() {
           <Reveal variant="left">
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-[var(--shadow-lift)]">
               <SmartImage
-                src="/images/team/duke-portrait.webp"
+                src="/images/team/duke-portrait.jpg"
                 alt="Duke Schneider, owner of Texas Deck Builders"
                 tone="green"
                 label="Duke on a job site"

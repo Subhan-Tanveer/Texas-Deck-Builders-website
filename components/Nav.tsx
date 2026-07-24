@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
@@ -41,26 +42,19 @@ export default function Nav() {
         {/* Logo */}
         <Link
           href="/"
-          className="group flex items-center gap-2.5"
+          className="group flex items-center"
           aria-label={`${SITE.name} home`}
         >
-          <span
-            className={`grid h-10 w-10 place-items-center rounded-lg bg-forest text-cream transition-transform duration-300 group-hover:rotate-6 group-hover:scale-105`}
-          >
-            {/* deck-plank mark */}
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
-              <path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-              <path d="M8 4v16M16 4v16" stroke="currentColor" strokeWidth="1" opacity="0.5" />
-            </svg>
-          </span>
-          <span className="leading-tight">
-            <span className="block font-display text-lg font-semibold text-forest">
-              Texas Deck
-            </span>
-            <span className="-mt-1 block font-display text-lg font-semibold text-cedar">
-              Builders
-            </span>
-          </span>
+          <Image
+            src="/logo.png"
+            alt={SITE.name}
+            width={200}
+            height={211}
+            priority
+            className={`w-auto transition-all duration-300 group-hover:scale-105 ${
+              scrolled ? "h-11" : "h-14"
+            }`}
+          />
         </Link>
 
         {/* Desktop links */}

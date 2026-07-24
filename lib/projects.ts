@@ -8,8 +8,8 @@ export type Project = {
   scope: string;
   quote: string;
   customer: string;
-  before: string; // /images/projects/*-before.webp
-  after: string; // /images/projects/*-after.webp
+  before: string; // /images/projects/*-before.jpg
+  after: string; // /images/projects/*-after.jpg
   featured?: boolean;
 };
 
@@ -29,8 +29,8 @@ export const PROJECTS: Project[] = [
     scope: "Multi-level cedar deck, louvered pergola, integrated lighting",
     quote: "Duke and his crew turned our sloped, unusable yard into the best room in our house.",
     customer: "The Hendersons",
-    before: "/images/projects/circle-c-before.webp",
-    after: "/images/projects/circle-c-after.webp",
+    before: "/images/projects/circle-c-before.jpg",
+    after: "/images/projects/circle-c-after.jpg",
     featured: true,
   },
   {
@@ -43,8 +43,8 @@ export const PROJECTS: Project[] = [
     scope: "Low-maintenance composite deck with custom cable railing",
     quote: "Three years in and it still looks like the day they finished. Zero maintenance.",
     customer: "Marcus & Lena P.",
-    before: "/images/projects/westlake-before.webp",
-    after: "/images/projects/westlake-after.webp",
+    before: "/images/projects/westlake-before.jpg",
+    after: "/images/projects/westlake-after.jpg",
     featured: true,
   },
   {
@@ -57,8 +57,8 @@ export const PROJECTS: Project[] = [
     scope: "Three-tier hillside deck with steel substructure and lake views",
     quote: "They engineered a deck onto a hill everyone said was impossible. Unreal craftsmanship.",
     customer: "The Alvarez Family",
-    before: "/images/projects/lakeway-before.webp",
-    after: "/images/projects/lakeway-after.webp",
+    before: "/images/projects/lakeway-before.jpg",
+    after: "/images/projects/lakeway-after.jpg",
     featured: true,
   },
   {
@@ -71,8 +71,8 @@ export const PROJECTS: Project[] = [
     scope: "Flagstone patio, gas firepit, built-in bench seating",
     quote: "Our backyard went from dirt to the place every neighbor wants to hang out.",
     customer: "Jenna R.",
-    before: "/images/projects/cedar-park-before.webp",
-    after: "/images/projects/cedar-park-after.webp",
+    before: "/images/projects/cedar-park-before.jpg",
+    after: "/images/projects/cedar-park-after.jpg",
   },
   {
     slug: "dripping-springs-pergola",
@@ -84,8 +84,8 @@ export const PROJECTS: Project[] = [
     scope: "Freestanding pergola with adjustable louvers and fans",
     quote: "Golden hour on this pergola is something else. Worth every penny.",
     customer: "Tom & Sarah K.",
-    before: "/images/projects/dripping-springs-before.webp",
-    after: "/images/projects/dripping-springs-after.webp",
+    before: "/images/projects/dripping-springs-before.jpg",
+    after: "/images/projects/dripping-springs-after.jpg",
   },
   {
     slug: "round-rock-privacy-fence",
@@ -97,8 +97,8 @@ export const PROJECTS: Project[] = [
     scope: "Horizontal slat fence with steel posts and custom gate",
     quote: "The fence matches our deck perfectly. It finally feels like one design.",
     customer: "The Nguyens",
-    before: "/images/projects/round-rock-before.webp",
-    after: "/images/projects/round-rock-after.webp",
+    before: "/images/projects/round-rock-before.jpg",
+    after: "/images/projects/round-rock-after.jpg",
   },
   {
     slug: "bee-cave-outdoor-kitchen",
@@ -110,8 +110,8 @@ export const PROJECTS: Project[] = [
     scope: "Composite deck, stone outdoor kitchen, covered dining",
     quote: "We host every holiday now. This deck changed how our family spends time.",
     customer: "The Delgados",
-    before: "/images/projects/bee-cave-before.webp",
-    after: "/images/projects/bee-cave-after.webp",
+    before: "/images/projects/bee-cave-before.jpg",
+    after: "/images/projects/bee-cave-after.jpg",
     featured: true,
   },
   {
@@ -124,8 +124,8 @@ export const PROJECTS: Project[] = [
     scope: "Structural repair, board replacement, sand & re-stain",
     quote: "They saved a deck we thought we'd have to tear down. Looks brand new.",
     customer: "Bill H.",
-    before: "/images/projects/south-austin-before.webp",
-    after: "/images/projects/south-austin-after.webp",
+    before: "/images/projects/south-austin-before.jpg",
+    after: "/images/projects/south-austin-after.jpg",
   },
   {
     slug: "steiner-ranch-pool-deck",
@@ -137,8 +137,8 @@ export const PROJECTS: Project[] = [
     scope: "Wraparound pool deck with slip-resistant composite decking",
     quote: "Cool underfoot even in August. The kids live out here now.",
     customer: "The Foster Family",
-    before: "/images/projects/steiner-ranch-before.webp",
-    after: "/images/projects/steiner-ranch-after.webp",
+    before: "/images/projects/steiner-ranch-before.jpg",
+    after: "/images/projects/steiner-ranch-after.jpg",
   },
   {
     slug: "mueller-modern-deck",
@@ -150,8 +150,8 @@ export const PROJECTS: Project[] = [
     scope: "Low-profile floating deck with hidden fasteners and bench",
     quote: "Clean, modern, and built like a piece of furniture. Exactly what we wanted.",
     customer: "Priya & Dev",
-    before: "/images/projects/mueller-before.webp",
-    after: "/images/projects/mueller-after.webp",
+    before: "/images/projects/mueller-before.jpg",
+    after: "/images/projects/mueller-after.jpg",
   },
   {
     slug: "hutto-covered-deck",
@@ -163,8 +163,8 @@ export const PROJECTS: Project[] = [
     scope: "Covered deck with standing-seam metal roof and fans",
     quote: "Rain or shine, we're outside. The covered roof was the perfect call.",
     customer: "The Barretts",
-    before: "/images/projects/hutto-before.webp",
-    after: "/images/projects/hutto-after.webp",
+    before: "/images/projects/hutto-before.jpg",
+    after: "/images/projects/hutto-after.jpg",
   },
   {
     slug: "georgetown-wrap-deck",
@@ -176,8 +176,8 @@ export const PROJECTS: Project[] = [
     scope: "Wraparound porch-style deck with turned railing",
     quote: "Curb appeal through the roof. Neighbors keep asking who built it.",
     customer: "The Wallaces",
-    before: "/images/projects/georgetown-before.webp",
-    after: "/images/projects/georgetown-after.webp",
+    before: "/images/projects/georgetown-before.jpg",
+    after: "/images/projects/georgetown-after.jpg",
   },
   {
     slug: "pflugerville-patio-pergola",
@@ -189,8 +189,8 @@ export const PROJECTS: Project[] = [
     scope: "Paver patio with attached cedar pergola and lighting",
     quote: "The lighting under the pergola makes summer nights magic.",
     customer: "Erica M.",
-    before: "/images/projects/pflugerville-before.webp",
-    after: "/images/projects/pflugerville-after.webp",
+    before: "/images/projects/pflugerville-before.jpg",
+    after: "/images/projects/pflugerville-after.jpg",
   },
   {
     slug: "manor-family-deck",
@@ -202,8 +202,8 @@ export const PROJECTS: Project[] = [
     scope: "Budget-friendly deck with stairs and railing",
     quote: "Great value and they never cut a corner. Duke is the real deal.",
     customer: "The Owusus",
-    before: "/images/projects/manor-before.webp",
-    after: "/images/projects/manor-after.webp",
+    before: "/images/projects/manor-before.jpg",
+    after: "/images/projects/manor-after.jpg",
   },
   {
     slug: "leander-elevated-deck",
@@ -215,8 +215,8 @@ export const PROJECTS: Project[] = [
     scope: "Second-story deck with steel stringers and under-deck drainage",
     quote: "Rock solid two stories up. The dry space underneath is a bonus room now.",
     customer: "The Cardenas Family",
-    before: "/images/projects/leander-before.webp",
-    after: "/images/projects/leander-after.webp",
+    before: "/images/projects/leander-before.jpg",
+    after: "/images/projects/leander-after.jpg",
   },
   {
     slug: "buda-modern-fence",
@@ -228,8 +228,8 @@ export const PROJECTS: Project[] = [
     scope: "Steel-framed horizontal cedar fence with automated gate",
     quote: "Sleek, private, and built to outlast the house. Incredible work.",
     customer: "Ray & Tom",
-    before: "/images/projects/buda-before.webp",
-    after: "/images/projects/buda-after.webp",
+    before: "/images/projects/buda-before.jpg",
+    after: "/images/projects/buda-after.jpg",
   },
 ];
 

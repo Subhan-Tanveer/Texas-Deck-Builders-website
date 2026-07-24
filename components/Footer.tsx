@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Facebook, Instagram, Star } from "lucide-react";
 import { SITE, NAV_LINKS } from "@/lib/site";
 import { SERVICES } from "@/lib/services";
@@ -10,16 +11,14 @@ export default function Footer() {
       <div className="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
         {/* Brand */}
         <div className="lg:col-span-1">
-          <div className="flex items-center gap-2.5">
-            <span className="grid h-10 w-10 place-items-center rounded-lg bg-cream/10 text-cream">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
-                <path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                <path d="M8 4v16M16 4v16" stroke="currentColor" strokeWidth="1" opacity="0.5" />
-              </svg>
-            </span>
-            <span className="font-display text-xl font-semibold text-cream">
-              Texas Deck Builders
-            </span>
+          <div className="inline-block rounded-2xl bg-cream/95 p-3">
+            <Image
+              src="/logo.png"
+              alt={SITE.name}
+              width={200}
+              height={211}
+              className="h-20 w-auto"
+            />
           </div>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-cream/70">
             Austin&apos;s fastest-growing deck experts. Handcrafted decks,

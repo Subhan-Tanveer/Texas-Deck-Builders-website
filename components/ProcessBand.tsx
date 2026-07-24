@@ -35,7 +35,7 @@ export default function ProcessBand() {
         <div className="absolute inset-0 scale-110">
           <HeroMedia
             video="/videos/build-timelapse.mp4"
-            image="/images/build-timelapse.webp"
+            image="/images/build-timelapse.jpg"
             alt=""
             tone="wood"
             label="Deck build time-lapse"

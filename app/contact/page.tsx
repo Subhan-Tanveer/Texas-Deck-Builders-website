@@ -48,7 +48,7 @@ export default function ContactPage() {
         eyebrow="Free Quote"
         title="Get your free quote."
         subtitle="Tell us about your project in under two minutes. Duke reviews every request personally and gets back to you within 24 hours."
-        image="/images/contact-hero.webp"
+        image="/images/contact-hero.jpg"
         video="/videos/contact-hero.mp4"
         crumbs={[
           { label: "Home", href: "/" },

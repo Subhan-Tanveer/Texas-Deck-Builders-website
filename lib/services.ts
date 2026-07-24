@@ -28,7 +28,7 @@ export const SERVICES: Service[] = [
       "Engineered footings rated for Texas soil",
     ],
     icon: "Hammer",
-    image: "/images/services/deck-building.webp",
+    image: "/images/services/deck-building.jpg",
   },
   {
     slug: "deck-repair",
@@ -46,7 +46,7 @@ export const SERVICES: Service[] = [
       "Railing & stair rebuilds",
     ],
     icon: "Wrench",
-    image: "/images/services/deck-repair.webp",
+    image: "/images/services/deck-repair.jpg",
   },
   {
     slug: "patios",
@@ -64,7 +64,7 @@ export const SERVICES: Service[] = [
       "Low-maintenance surfaces",
     ],
     icon: "Home",
-    image: "/images/services/patios.webp",
+    image: "/images/services/patios.jpg",
   },
   {
     slug: "pergolas",
@@ -82,7 +82,7 @@ export const SERVICES: Service[] = [
       "Wind-rated engineering",
     ],
     icon: "Columns3",
-    image: "/images/services/pergolas.webp",
+    image: "/images/services/pergolas.jpg",
   },
   {
     slug: "fencing",
@@ -100,7 +100,7 @@ export const SERVICES: Service[] = [
       "Privacy-first layouts",
     ],
     icon: "Fence",
-    image: "/images/services/fencing.webp",
+    image: "/images/services/fencing.jpg",
   },
 ];
 

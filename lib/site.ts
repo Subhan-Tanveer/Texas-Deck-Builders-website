@@ -41,7 +41,7 @@ export const SITE = {
 export const HERO_MEDIA = {
   video: "/videos/hero.mp4",
   videoMobile: "/videos/hero-mobile.mp4",
-  poster: "/images/hero-poster.webp",
+  poster: "/images/hero-poster.jpg",
 } as const;
 
 export const NAV_LINKS = [

@@ -12,7 +12,7 @@ import HeroMedia from "@/components/HeroMedia";
 export default function CtaSection({
   title = "Ready to transform your backyard?",
   subtitle = "Get a free, no-pressure quote from Duke. Most estimates within 24 hours.",
-  image = "/images/cta-deck-evening.webp",
+  image = "/images/cta-deck-evening.jpg",
   video = "/videos/cta-deck-evening.mp4",
 }: {
   title?: string;
