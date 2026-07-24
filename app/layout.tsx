@@ -7,6 +7,7 @@ import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ClickToCall from "@/components/ClickToCall";
+import PageTransition from "@/components/PageTransition";
 import JsonLd from "@/components/JsonLd";
 
 const fraunces = Fraunces({
@@ -75,6 +76,7 @@ export default function RootLayout({
       <body className="min-h-full bg-cream text-bark antialiased">
         <JsonLd data={localBusinessSchema} />
         <SmoothScrollProvider />
+        <PageTransition />
         <Nav />
         <ClickToCall />
         <div id="smooth-wrapper">
